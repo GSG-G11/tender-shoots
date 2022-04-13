@@ -1,0 +1,23 @@
+.actions-outer{
+    width: 80%;
+    margin: 1px auto;
+}
+.actions{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .action-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 49%;
+    margin: 10px auto;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(178, 178, 178);
+    border-radius: 10px;
+    padding: 5px 15px;
+  }
+  
+  
