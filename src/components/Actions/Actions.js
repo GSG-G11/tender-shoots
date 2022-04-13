@@ -49,7 +49,7 @@ function Actions(props) {
           <i className="fa-solid fa-star" style={isSave ? { color: 'yellow' } : { color: '#FFFFFF' }} />
         </Button>
       </div>
-      <p style={{ color: 'red' }}>{error}</p>
+      {/* <p style={{ color: 'red' }}>{error}</p> */}
     </div>
   );
 }
