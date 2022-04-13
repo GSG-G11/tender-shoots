@@ -18,8 +18,8 @@ function Navbar() {
           </NavLink>
         </li>
         <li className="navbar-item">
-          <NavLink to="/favourites" className="navbar-link">
-            favourites
+          <NavLink to="/favorites" className="navbar-link">
+            favorites
           </NavLink>
         </li>
       </ul>

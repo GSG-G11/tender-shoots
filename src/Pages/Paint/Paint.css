@@ -1,0 +1,17 @@
+.paint{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.draw-area{
+    width: 80%;
+}
+.Menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
