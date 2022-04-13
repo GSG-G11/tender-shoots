@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import { Favorites, Home } from './Pages';
+import { Favorites, Home, Paint } from './Pages';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/paint" element={<h1>Paint</h1>} />
-        <Route path="/favourites" element={<Favorites />} />
+        <Route path="/paint" element={<Paint />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </Router>
   );
