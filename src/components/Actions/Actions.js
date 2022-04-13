@@ -5,7 +5,7 @@ import { Button } from '../UI';
 
 function Actions(props) {
   const { color } = props;
-  const [error, setError] = useState(false);
+
   const [isCopy, setIsCopy] = useState(false);
   const [isSave, setIsSave] = useState(false);
   const copy = () => {
@@ -18,10 +18,7 @@ function Actions(props) {
     if (!isInclude) {
       colors.push(color);
       localStorage.setItem('colors', JSON.stringify(colors));
-      setError(false);
       setIsSave(true);
-    } else {
-      setError(true);
     }
   };
   useEffect(() => {
@@ -38,18 +35,17 @@ function Actions(props) {
     <div className="action-wrapper">
       <p>{color}</p>
       <div className="btns">
-        <Button onClick={copy}>
+        <Button onClick={copy} color={color}>
           {isCopy ? (
             <i className="fa-solid fa-check" />
           ) : (
             <i className="fa fa-copy" />
           )}
         </Button>
-        <Button onClick={saveToFavorite}>
+        <Button onClick={saveToFavorite} color={color}>
           <i className="fa-solid fa-star" style={isSave ? { color: 'yellow' } : { color: '#FFFFFF' }} />
         </Button>
       </div>
-      {/* <p style={{ color: 'red' }}>{error}</p> */}
     </div>
   );
 }
