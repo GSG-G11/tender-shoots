@@ -15,6 +15,7 @@ function Home() {
     }`;
     const controller = new AbortController();
     const { signal } = controller;
+    setIsLoading(true);
     fetch(url, { signal })
       .then((res) => res.json())
       .then((data) => {
@@ -28,27 +29,25 @@ function Home() {
 
   return (
     <>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <>
-          <ColorBoard
-            actions={{
-              color1,
-              color2,
-              search,
-              setSearch,
-            }}
-          />
-          <div className="actions-outer">
-            <div className="actions">
-              <Actions color={color1} />
-              <Actions color={color2} />
-            </div>
+      <>
+        <ColorBoard
+          actions={{
+            color1,
+            color2,
+            search,
+            setSearch,
+          }}
+        />
+
+        <div className="actions-outer">
+          {isLoading ? <Loader /> : null}
+          <div className="actions">
+            <Actions color={color2} />
+            <Actions color={color1} />
           </div>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-        </>
-      )}
+        </div>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+      </>
       <div> </div>
     </>
   );

@@ -27,17 +27,20 @@ body{
   background-color: #e0ebfb;
 }
 .color-action {
+  position: relative;
   overflow: hidden;
-  width: 4rem;
-  height: 4rem;
+  width: 41px;
+  height: 41px;
   border-radius: 50%;
-  box-shadow: 2px 1px 1px 1px rgb(110, 110, 110);
+  
 }
 .color-input {
-  padding: 0;
-  width: 150%;
-  height: 150%;
-  margin: -25%;
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  width: 56px;
+  height: 56px;
+  border: none;
   cursor: pointer;
 }
 .color-demo {
